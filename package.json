@@ -1,0 +1,19 @@
+{
+  "name": "iv-social-connection",
+  "version": "1.0.1",
+  "description": "Mongoose back-end social db",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index",
+    "seed": "node utils/seed"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^7.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
+}
