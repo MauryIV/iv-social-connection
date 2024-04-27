@@ -42,14 +42,15 @@ const thoughtSchema = new Schema(
     toJSON: {
       virtuals: true,
     },
+    id: false,
   }
 );
 
-thoughtSchema.path('formattedCreatedAt').get(function() {
+thoughtSchema.virtual('formattedCreatedAt').get(function() {
   return this.createdAt.toLocaleString('en-US', { timeZone: 'UTC' });
 });
 
-thoughtSchema.path('formattedReactionsdCreatedAt').get(function() {
+thoughtSchema.virtual('formattedReactionsCreatedAt').get(function() {
   return this.reactions.map(reaction => reaction.createdAt.toLocaleString('en-US', { timeZone: 'UTC' }));
 });
 
