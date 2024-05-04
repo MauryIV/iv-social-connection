@@ -35,7 +35,7 @@ I think this code would be most useful as a reference or something to base a pro
 
 <a id="Visuals"></a>
 ## Visuals
-NA
+[Walkthrough Video](https://drive.google.com/file/d/1mio7n9t3i4weeP8Lkux43gO3ZZOJnE-7/view)
 
 <a id="tests"></a>
 ## Tests
