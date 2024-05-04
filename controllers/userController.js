@@ -4,6 +4,7 @@ const deleteUserContent = async (userId) => {
   try {
     const user = await User.findById(userId);
     const username = user.username;
+    await Thought.updateMany({ "reactions.username": username }, { $pull: { reactions: { username: username } } });
     await Thought.deleteMany({ username: username });
     await User.updateMany({ friends: userId }, { $pull: { friends: userId } });
     return { message: "Deleted User thoughts and reactions" };
